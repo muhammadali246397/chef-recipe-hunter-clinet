@@ -8,6 +8,7 @@ import Slider from '../Slider/Slider';
 import Login from '../Login/Login';
 import Resister from '../Resister/Resister';
 import Blog from '../Blog/Blog';
+import Chef from '../ChefData/Chef';
 
   const router = createBrowserRouter([
     {
