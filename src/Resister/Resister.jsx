@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
@@ -6,7 +6,7 @@ import Navbigation from '../share/Navbar/Navbigation';
 import Footer from '../share/Footer/Footer';
 
 const Resister = () => {
-
+const [error,setError] =useState(null)
     const { createUser, spinner } = useContext(AuthContext);
 
     const signin = (event => {
@@ -16,6 +16,7 @@ const Resister = () => {
         const email = form.email.value;
         const photoUrl = form.photoUrl.value;
         const password = form.password.value;
+        setError(null)
         console.log(name, email, photoUrl, password)
         createUser(email, password)
             .then(result => {
@@ -26,7 +27,8 @@ const Resister = () => {
                 alert('resistation complete')
             })
             .catch(error => {
-                console.log(error.message)
+                const message = error.message
+                setError(message)
             })
     })
 
@@ -43,7 +45,7 @@ const Resister = () => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Image Link</Form.Label>
-                            <Form.Control required type="" name='photoUrl' placeholder="Enter Image url" />
+                            <Form.Control required type="text" name='photoUrl' placeholder="Enter Image url" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
@@ -61,6 +63,7 @@ const Resister = () => {
                             Submit
                         </Button>
                         <p>allready have an account ? <Link to='/login'>login</Link> </p>
+                        <p className='text-danger'>{error}</p>
                     </Form>
                 </div>
             </div>

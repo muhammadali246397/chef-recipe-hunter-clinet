@@ -11,6 +11,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
     const [users, setUsers] =useState(null);
     const [spinner, setSpinner] = useState(true)
+    
     const createUser = (email,password) => {
        return createUserWithEmailAndPassword(auth,email,password)
     }
