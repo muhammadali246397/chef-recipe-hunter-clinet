@@ -8,7 +8,7 @@ import Footer from '../share/Footer/Footer';
 const Login = () => {
 
 
-    const { handleLogin } = useContext(AuthContext);
+    const { handleLogin,googleSignin,gitSignIn } = useContext(AuthContext);
 
     const login = (event => {
         event.preventDefault();
@@ -25,6 +25,21 @@ const Login = () => {
                 console.log(error.message)
             })
     })
+
+    const handleGoogleSignin = () => {
+        googleSignin()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => console.log(error.message))
+    }
+
+    const handleGitSingIn = () => {
+        gitSignIn()
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error.message))
+       
+    } 
 
     return (
         <Container>
@@ -51,8 +66,8 @@ const Login = () => {
                 <p>new to chef master <Link to="/resister">resister</Link> </p>
             
             </Form>
-            <Button variant='outline-dark' className='me-3'>Signin with google</Button>
-            <Button variant='outline-dark'>Signin with github</Button>
+            <Button onClick={handleGoogleSignin} variant='outline-dark' className='me-3'>Signin with google</Button>
+            <Button onClick={handleGitSingIn} variant='outline-dark'>Signin with github</Button>
            
         </Container>
                 </div>
