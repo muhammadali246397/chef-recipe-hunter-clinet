@@ -13,19 +13,22 @@ const AuthProvider = ({children}) => {
     const [spinner, setSpinner] = useState(true)
     
     const createUser = (email,password) => {
+        setSpinner(true)
        return createUserWithEmailAndPassword(auth,email,password)
     }
     const handleLogin= (email,password) => {
+        setSpinner(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
     const handlelogOut = () => {
+        setSpinner(true)
         return signOut(auth)
     }
     useEffect(() => {
        const unsubscribe =  onAuthStateChanged(auth,(logedUser => {
             setUsers(logedUser)
-            setSpinner(true)
+            setSpinner(false)
         }))
         return unsubscribe;
     },[])

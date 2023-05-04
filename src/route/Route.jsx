@@ -11,6 +11,7 @@ import Blog from '../Blog/Blog';
 import Chef from '../ChefData/Chef';
 import ChefCard from '../ChefData/ChefCard';
 import Recipes from '../Recipe/Recipes';
+import Privateroute from '../Privateroute/Privateroute';
 
   const router = createBrowserRouter([
     {
@@ -40,7 +41,7 @@ import Recipes from '../Recipe/Recipes';
     
     {
      path:'/receipe/:id',
-     element:<Recipes></Recipes>,
+     element:<Privateroute><Recipes></Recipes></Privateroute>,
      loader:({params}) => fetch(`https://assignment-ten-server-muhammadali246397.vercel.app/receipes/${params.id}`)
       
     }

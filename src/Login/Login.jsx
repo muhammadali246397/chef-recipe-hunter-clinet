@@ -1,6 +1,6 @@
 import React, { useContext,useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
 import Navbigation from '../share/Navbar/Navbigation';
 import Footer from '../share/Footer/Footer';
@@ -8,7 +8,9 @@ import Footer from '../share/Footer/Footer';
 const Login = () => {
 
     const [error, setError] = useState(null)
-
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
     const { handleLogin,googleSignin,gitSignIn } = useContext(AuthContext);
 
     const login = (event => {
@@ -22,6 +24,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from)
             })
             .catch(error => {
                const errorMessage = error.message
@@ -33,6 +36,7 @@ const Login = () => {
         googleSignin()
         .then(result => {
             console.log(result.user)
+            navigate(from)
         })
         .catch(error => {
             const googleError = error.message;
@@ -42,7 +46,9 @@ const Login = () => {
 
     const handleGitSingIn = () => {
         gitSignIn()
-        .then(result => console.log(result.user))
+        .then(result => {
+            navigate(from)
+        })
         .catch(error => {
             const gitError = error.message;
             setError(gitError)
