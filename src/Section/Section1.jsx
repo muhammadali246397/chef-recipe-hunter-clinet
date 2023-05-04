@@ -8,15 +8,15 @@ const Section1 = () => {
     return (
         <Container>
             <h3 className='text-center my-5'><span className='text-danger text-center fw-bold border-bottom'>Our Best Team </span></h3>
-            <div className="row row-cols-md-3 g-4">
-                <div>
-                    <img src={team1} alt="" />
+            <div className="row row-cols-md-3 g-2">
+                <div >
+                    <img className='w-full img-fluid' src={team1} alt="" />
+                </div>
+                <div className=''>
+                    <img className='w-full img-fluid' src={team2} alt="" />
                 </div>
                 <div>
-                    <img src={team2} alt="" />
-                </div>
-                <div>
-                <img src={team3} alt="" />
+                <img className='w-full img-fluid' src={team3} alt="" />
                 </div>
             </div>
         </Container>
