@@ -1,8 +1,6 @@
 import React from 'react';
 import background from "../assets/background-2.jpg"
-import slider1 from "../assets/slider1.webp"
-import slider2 from "../assets/slider2.webp"
-import slider3 from "../assets/slider3.jpeg"
+
 
 import { Button, Carousel, Container } from 'react-bootstrap';
 

@@ -13,11 +13,9 @@ const ChefCard = ({ chefdata }) => {
                         <Card >
                             <Card.Img style={{height:'180px'}} variant="top" src={picture} />
                             <Card.Body>
-                                <Card.Title>{name}</Card.Title>
+                                <Card.Title>Name : {name}</Card.Title>
                                 <Card.Text>
-                                    This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer.
+                                   
                                 </Card.Text>
                                 <Link to={`/receipe/${id}`}><Button className='btn-danger'>View recipes</Button></Link>
                             </Card.Body>

@@ -1,0 +1,5 @@
+- make uniq design 
+- set private route for show receipe
+- make 404 page not found error page
+- make a meaning full footer
+- authintication setup with email password ,google and github 

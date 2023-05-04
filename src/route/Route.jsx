@@ -12,11 +12,13 @@ import Chef from '../ChefData/Chef';
 import ChefCard from '../ChefData/ChefCard';
 import Recipes from '../Recipe/Recipes';
 import Privateroute from '../Privateroute/Privateroute';
+import Errorpage from '../Errorpage/Errorpage';
 
   const router = createBrowserRouter([
     {
       path: "/",
       element:<Home></Home>,
+      errorElement:<Errorpage></Errorpage>,
       children:[
        {
         path:'/',
