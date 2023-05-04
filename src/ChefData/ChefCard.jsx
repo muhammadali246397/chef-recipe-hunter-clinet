@@ -10,8 +10,8 @@ const ChefCard = ({ chefdata }) => {
             <Row className='mb-4'>
                
                     <Col>
-                        <Card>
-                            <Card.Img variant="top" src={picture} />
+                        <Card >
+                            <Card.Img style={{height:'180px'}} variant="top" src={picture} />
                             <Card.Body>
                                 <Card.Title>{name}</Card.Title>
                                 <Card.Text>
@@ -19,7 +19,7 @@ const ChefCard = ({ chefdata }) => {
                                     lead-in to additional content. This content is a little bit
                                     longer.
                                 </Card.Text>
-                                <Link><Button className='btn-danger'>View recipes</Button></Link>
+                                <Link to={`/receipe/${id}`}><Button className='btn-danger'>View recipes</Button></Link>
                             </Card.Body>
                             
                         </Card>

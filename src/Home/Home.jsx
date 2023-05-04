@@ -11,7 +11,7 @@ const Home = () => {
          <Container>
           <Navbigation></Navbigation>
           <Outlet></Outlet>
-          <Chef></Chef>
+         <Chef></Chef>
           <Footer></Footer>  
          </Container>
        

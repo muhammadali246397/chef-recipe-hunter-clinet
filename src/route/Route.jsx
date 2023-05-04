@@ -9,6 +9,8 @@ import Login from '../Login/Login';
 import Resister from '../Resister/Resister';
 import Blog from '../Blog/Blog';
 import Chef from '../ChefData/Chef';
+import ChefCard from '../ChefData/ChefCard';
+import Recipes from '../Recipe/Recipes';
 
   const router = createBrowserRouter([
     {
@@ -19,28 +21,29 @@ import Chef from '../ChefData/Chef';
         path:'/',
         element:<Slider></Slider>
        },
-      
-       {
-        path:'/login',
-        element:<Login></Login>,
-       },
-      
-          {
-            path:'/resister',
-            element:<Resister></Resister>
-          },
+      ]
+    },
     {
       path:'/blog',
       element:<Blog></Blog>
-    }
-       
-
-      ]
     },
-    // {
-     
+    {
+      path:'/login',
+      element:<Login></Login>,
+    },
+        {
+          path:'/resister',
+          element:<Resister></Resister>
+        },
       
-    // }
+
+    
+    {
+     path:'/receipe/:id',
+     element:<Recipes></Recipes>,
+     loader:({params}) => fetch(`https://assignment-ten-server-muhammadali246397.vercel.app/receipes/${params.id}`)
+      
+    }
   ]);
 
 const Route = () => {
