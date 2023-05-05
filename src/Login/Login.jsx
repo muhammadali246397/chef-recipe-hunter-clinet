@@ -61,7 +61,7 @@ const Login = () => {
         <Container>
             <Navbigation></Navbigation>
                 <div className='bg-light'>
-                <Container className='w-50 mx-auto'>
+                <Container className='w-md-50 mx-auto'>
             
             <Form onSubmit={login}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -82,7 +82,7 @@ const Login = () => {
                 <p>new to chef master <Link to="/resister">resister</Link> </p>
             
             </Form>
-            <Button onClick={handleGoogleSignin} variant='outline-dark' className='me-3'>Signin with google</Button>
+            <Button onClick={handleGoogleSignin} variant='outline-dark' className='me-3 '>Signin with google</Button>
             <Button onClick={handleGitSingIn} variant='outline-dark'>Signin with github</Button>
             <p className='text-danger'>{error}</p>
            

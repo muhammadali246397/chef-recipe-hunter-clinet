@@ -41,7 +41,7 @@ const [error,setError] =useState(null)
         <Container>
             <Navbigation></Navbigation>
             <div className='bg-light'>
-            <div className='w-50 mx-auto'>
+            <div className='w-md-50 mx-auto'>
                
                     <Form onSubmit={signin}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">

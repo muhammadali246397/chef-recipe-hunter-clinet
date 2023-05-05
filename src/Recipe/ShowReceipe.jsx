@@ -18,7 +18,7 @@ const ShowReceipe = ({ receipe }) => {
     return (
         <Container>
            
-            <Row>
+            <Row className='mb-3'>
                 <Col>
                     <Card>
                         <Card.Img style={{height:"250px"}} variant="top" src={photo} />

@@ -13,7 +13,7 @@ const Recipes = () => {
     return (
         <Container>
             <Navbigation></Navbigation>
-            <div className='d-flex justify-content-between align-items-center my-4 p-4 ' style={{
+            <div className='d-md-flex justify-content-between align-items-center my-4 p-4 ' style={{
                 background: 'whiteSmoke',
                 backgroundSize: 'cover',
                 }}>
@@ -28,7 +28,7 @@ const Recipes = () => {
 
             </div>
             <h3 className='text-center my-5 text-danger'>Fine and Delecious Foods</h3>
-            <div className='row row-cols-md-2'>
+            <div className='row row-cols-md-2 g-2'>
                 {
                     receipeData.map(showreceipe => <ShowReceipe
                         key={showreceipe.id}
