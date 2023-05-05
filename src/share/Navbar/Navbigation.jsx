@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Container, Form, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Authprovider/AuthProvider';
 
 const Navbigation = () => {
@@ -22,9 +22,9 @@ const Navbigation = () => {
               navbarScroll
             >
 
-              <Link className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/'>Home</Link>
-              <Link className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/'>About</Link>
-              <Link className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/blog'>Blog</Link>
+              <NavLink className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/'>Home</NavLink>
+              <NavLink className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/about'>About</NavLink>
+              <NavLink className='text-decoration-none ms-3 btn outline-dark fw-bolder' to='/blog'>Blog</NavLink>
 
 
             </Nav>
