@@ -1,5 +1,5 @@
 import React from 'react';
-import background from "../assets/background-2.jpg"
+import background from "../../src/assets/background-2.jpg"
 
 
 import { Button, Carousel, Container } from 'react-bootstrap';

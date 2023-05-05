@@ -17,8 +17,11 @@ const ChefCard = ({ chefdata }) => {
                                 <Card.Title>Experience : {experience}</Card.Title>
 
                                 <Card.Text>
-                                   <p>Number of receipe : {numOfRecipes}</p>
-                                   <p>Likes : {likes}</p>
+                                   Number of receipe : {numOfRecipes}
+                                  
+                                </Card.Text>
+                                <Card.Text>
+                                Likes : {likes}
                                 </Card.Text>
                                 <Link to={`/receipe/${id}`}><Button className='btn-danger'>View recipes</Button></Link>
                             </Card.Body>

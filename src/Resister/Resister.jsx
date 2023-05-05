@@ -7,7 +7,7 @@ import Footer from '../share/Footer/Footer';
 
 const Resister = () => {
 const [error,setError] =useState(null)
-    const { createUser, spinner } = useContext(AuthContext);
+    const { createUser, useerupdateProfile } = useContext(AuthContext);
 
     const signin = (event => {
         event.preventDefault();
@@ -25,11 +25,16 @@ const [error,setError] =useState(null)
                 form.reset()
 
                 alert('resistation complete')
+                useerupdateProfile(newUsers,name,photoUrl)
+                .then(()=> console.log('photo and name update'))
+                .catch(error => console.log(error.message))
             })
             .catch(error => {
                 const message = error.message
                 setError(message)
             })
+            
+            
     })
 
     return (

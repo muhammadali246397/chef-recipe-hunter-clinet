@@ -11,6 +11,7 @@ const Home = () => {
         
          <Container>
           <Navbigation></Navbigation>
+          <Outlet></Outlet>
          <Chef></Chef>
          <Section1></Section1>
           <Footer></Footer>  
