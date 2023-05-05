@@ -19,7 +19,7 @@ const Recipes = () => {
                 }}>
                 <div>
                     <h1>Hi,This is Emeril Lagasse</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur expedita libero laboriosam est. Blanditiis quaerat necessitatibus in perferendis praesentium odio voluptates beatae nisi eligendi laborum, saepe sed iure tenetur.</p>
+                    <p>Emeril John Lagassé III is an American celebrity chef, restaurateur, television personality, cookbook author, and National Best Recipe award winner for his Turkey and Hot Sausage Chili recipe in 2003</p>
 
                 </div>
                 <div className=''>

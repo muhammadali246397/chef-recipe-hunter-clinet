@@ -15,8 +15,9 @@ const Chef = () => {
     return (
         <div>
             <div className='my-5 text-center'>
-            <h2 className='fw-bold border-bottom text-danger'>Our all chefs</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quis aspernatur nisi doloribus accusamus commodi nam aliquid iusto magni inventore, saepe laboriosam. Atque consequatur, eveniet ipsum excepturi possimus eaque debitis.</p>
+            <h1 className='fw-bold text-danger'><span className='border-bottom border-danger py-2'>Our all chefs</span></h1>
+
+            <p className='text-center my-4'>As a chef team, its important to communicate effectively and work together towards a common goal. Encourage open and honest communication among team members, and make sure that everyone is aware of their roles and responsibilities.</p>
             </div>
 
            <div className='row row-cols-md-3'>

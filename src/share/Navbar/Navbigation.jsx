@@ -10,7 +10,7 @@ const Navbigation = () => {
   }
   console.log(users)
   return (
-    <div className='mb-4 border-bottom'>
+    <div className='mb-4 border-bottom border-danger py-2'>
       <Navbar bg="" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#" className='text-danger fw-bold'>Chef Master</Navbar.Brand>
@@ -34,7 +34,7 @@ const Navbigation = () => {
                 users ? <>
                   <div className='d-inline me-4' >
 
-                    <OverlayTrigger placement='left' overlay={(<Tooltip>{`${users.displayName}`}</Tooltip>)}  triggerType='hover'>
+                    <OverlayTrigger placement='right' overlay={(<Tooltip>{`${users.displayName}`}</Tooltip>)}  triggerType='hover'>
                     <img className='' style={{width:'50px',height:'50px',borderRadius:'50px'}} src={users.photoURL} alt="" />
 
                     </OverlayTrigger>

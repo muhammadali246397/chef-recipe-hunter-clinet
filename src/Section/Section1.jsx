@@ -7,7 +7,7 @@ import team3 from '../../src/assets/chef3.jpg'
 const Section1 = () => {
     return (
         <Container>
-            <h3 className='text-center my-5'><span className='text-danger text-center fw-bold border-bottom'>Our Best Team </span></h3>
+            <h1 className='text-center my-5'><span className='text-danger text-center fw-bold border-bottom border-danger py-2'>Our Best Team </span></h1>
             <div className="row row-cols-md-3 g-2">
                 <div >
                     <img className='w-full img-fluid' src={team1} alt="" />
